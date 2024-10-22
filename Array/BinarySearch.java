@@ -1,4 +1,4 @@
-package Day8;
+
 
 public class BinarySearch {
     public static int binSearch(int numbers[], int key) {

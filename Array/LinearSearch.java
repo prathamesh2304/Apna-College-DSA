@@ -1,4 +1,4 @@
-package Day8;
+
 
 public class LinearSearch {
     public static int linearSearchFun(int num[],int key){
