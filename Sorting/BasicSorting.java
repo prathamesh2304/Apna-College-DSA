@@ -57,7 +57,25 @@ public class BasicSorting{
     // Time Complexity of Selection Sort is O(n^2) and Space Complexity is O(1)
     // Both are not the best sorting algorithm but they are the basic sorting algorithm
 
-    
+    public static void countingSort(int arr[]){
+        int largest = Integer.MIN_VALUE;
+         for(int i=0; i<arr.length;i++){
+            largest = Math.max(largest,arr[i]);
+         }
+        int count[] = new int[largest+1];
+         for(int i=0; i<arr.length; i++){
+            count[arr[i]]++;
+         }
+        // sorting
+        int j = 0;
+        for(int i=0; i<arr.length; i++){
+            while(count[i]>0){
+                arr[j] = i;
+                j++;
+                count[i]--;
+            }
+        }
+    }
 
     public static void main(String arg[]){
         int arr[] = {5,3,6,4,7,2,1};
@@ -77,7 +95,10 @@ public class BasicSorting{
         insertionSort(arr);
         System.out.println("Sorted Array Using Insertion Sort");
         printArr(arr);
-
+        System.out.println();
+        countingSort(arr);
+        System.out.println("Sorted Array Using Counting Sort");
+        printArr(arr);
     }
 
 }

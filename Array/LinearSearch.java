@@ -15,6 +15,7 @@ public class LinearSearch {
 
     public static void main(String[] args) {
     int numbers[] = {1,23,25,75,88,75};
+    
     int key = 75; 
         int index = linearSearchFun(numbers, key);
         if(index == -1){
@@ -25,3 +26,5 @@ public class LinearSearch {
     
     }
 }
+//time complexcity linear search 
+
