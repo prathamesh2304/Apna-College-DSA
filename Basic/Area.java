@@ -6,6 +6,7 @@ public class Area {
             float rad = sc.nextFloat(); // Using nextFloat() input of float is taken
             float area = 3.14f*rad*rad;
             System.out.println(area);
+        
         }
 
     }
